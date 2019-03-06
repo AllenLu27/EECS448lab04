@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="formChecker.js"></script>
+    <meta charset="utf-8">
+    <title>My web store</title>
+  </head>
+  <body>
+
+  <div class="tab">
+  <button class="tablinks" onclick="DisplayHome()">Home</button>
+  <button class="tablinks" onclick="DisplayMen()">Shop Men</button>
+  <button class="tablinks" onclick="DisplayWomen()">Shop Women</button>
+  </div>
+  <br>
+  <br>
+  <br>
+  <p id="forwomen" style="display:none">Currently not available, sorry</p>
+  <div class="item" id="item" style="display:none">
+    <form action="/customerBackend.php" onsubmit="return myFunction()">
+      UserName: <input type="text" name="name" value="name@domain.com" id="username"><br>
+      Password: <input type="password" name="email" id="password"><br><br>
+     Shirt: <input type="text" name="shirt" value="Enter quantity" id="shirt"><br>
+     Shoes: <input type="text" name="shoes" value="Enter quantity" id="shoes"><br>
+     Glasses: <input type="text" name="glasses" value="Enter quantity" id="glasses"><br>
+     T-shirt: <input type="text" name="t_shirt" value="Enter quantity" id="t_shirt"><br><br>
+     <p>Select your shipping method:</P>
+     <input type="radio" name="shipping" value="firstop"> Free 7 day<br>
+     <input type="radio" name="shipping" value="secondop"> $50.00 over night<br>
+    <input type="radio" name="shipping" value="thirdop"> $5.00 three day<br>
+    <input type="submit" value="Submit">
+     <input type="reset" value="Reset">
+  </div>
+</form>
+  </body>
+</html>
