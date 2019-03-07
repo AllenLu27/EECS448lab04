@@ -78,6 +78,12 @@ function DisplayHome()
   //    }
 }
 
+function validateEmail(email)
+{
+    let re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
 function myFunction()
 {
   let username=document.getElementById("username").value;
@@ -95,11 +101,18 @@ function myFunction()
   myitem.push(item3);
   myitem.push(item4);
 
-  if(username.lastIndexOf("@domain.com")==-1)
+  // if(username.lastIndexOf("@domain.com")==-1)
+  // {
+  //   alert("Invalid username");
+  //   return false;
+  // }
+
+  if(!validateEmail(username))
   {
-    alert("Invalid username");
-    return false;
+        alert("User name has to be an email address");
+        return false;
   }
+  
   if(password.length<8)
   {
        alert("Password has to be at least 8 characters long!");

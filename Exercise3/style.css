@@ -21,6 +21,11 @@ body
 
 }
 
+img
+{
+  width: 300px;
+  height: 250px;    
+}
 
 .tab button {
   background-color: inherit;
@@ -35,4 +40,8 @@ body
 
 .tab button:hover {
   background-color: #ddd;
+}
+
+table, th, td {
+  border: 1px solid black;
 }
