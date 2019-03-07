@@ -86,6 +86,9 @@ function myFunction()
   let item2=document.getElementById("shoes").value;
   let item3=document.getElementById("glasses").value;
   let item4=document.getElementById("t_shirt").value;
+  let ship1=document.getElementById("ship1").checked;
+  let ship2=document.getElementById("ship2").checked;
+  let ship3=document.getElementById("ship3").checked;
   let myitem=[];
   myitem.push(item1);
   myitem.push(item2);
@@ -110,5 +113,11 @@ function myFunction()
       return false;
     }
   }
+  if(!ship1 && !ship2 && !ship3)
+  {
+    alert("Please select a shipping method!");
+    return false;
+  }
+
   return true;
 }
