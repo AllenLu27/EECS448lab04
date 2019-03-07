@@ -109,7 +109,7 @@ function myFunction()
 
   if(!validateEmail(username))
   {
-        alert("User name has to be an email address");
+        alert("Username has to be an email address");
         return false;
   }
   
